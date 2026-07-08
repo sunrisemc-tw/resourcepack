@@ -1,0 +1,29 @@
+name: Release Resource Pack
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create resource pack zip
+        run: |
+          cd "日出伺服器專用材質包"
+          zip -r ../sunrisemc.s.resource.pack.zip .
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: release-${{ github.run_number }}
+          name: Release ${{ github.run_number }}
+          files: sunrisemc.s.resource.pack.zip
+          generate_release_notes: true
