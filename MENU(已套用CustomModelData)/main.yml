@@ -1,0 +1,124 @@
+name: '&4 日出伺服器'
+size: 36
+items:
+  btn-10:
+    slot: 10
+    item:
+      material: COMPASS
+      model-id: 10001
+      name: '&6 [1] 傳送系統'
+      lore:
+        - '&8傳送與移動'
+        - ''
+        - '&a▸ 點擊開啟'
+    actions:
+      - type: inventory
+        inventory: tp_system
+  btn-12:
+    slot: 12
+    item:
+      material: GRASS_BLOCK
+      model-id: 10002
+      name: '&a [2] 領地系統'
+      lore:
+        - '&8領地管理'
+        - ''
+        - '&a▸ 點擊開啟'
+    actions:
+      - type: inventory
+        inventory: land_system
+  btn-14:
+    slot: 14
+    item:
+      material: GOLD_INGOT
+      model-id: 10003
+      name: '&e [3] 經濟金融'
+      lore:
+        - '&8金錢與商店'
+        - ''
+        - '&a▸ 點擊開啟'
+    actions:
+      - type: inventory
+        inventory: eco_system
+
+  btn-16:
+    slot: 16
+    item:
+      material: COMPASS
+      model-id: 10004
+      name: '&b [4] 外部連結'
+      lore:
+        - '&8官方網站與社群'
+        - ''
+        - '&a▸ 點擊開啟'
+    actions:
+      - type: book
+        author: 日出伺服器
+        title: '&b外部連結'
+        lines:
+          1:
+            - '<click:open_url:"https://www.sunrisemc.tw"><hover:show_text:"點擊前往官方網站"><dark_aqua><u>[官方網站]</u></hover></click>'
+            - ''
+            - ''
+            - '<click:open_url:"https://map.sunrisemc.tw"><hover:show_text:"點擊前往衛星地圖"><dark_aqua><u>[衛星地圖]</u></hover></click>'
+            - ''
+            - ''
+            - '<click:open_url:"https://discord.com/invite/3uEMfvv4d5"><hover:show_text:"點擊加入Discord"><dark_aqua><u>[DC伺服器]</u></hover></click>'
+            - ''
+            - '<click:open_url:"https://fp.sunrisemc.tw"><hover:show_text:"點擊前往伺服器假人控制介面"><dark_aqua><u>[假人控制介面]</u></hover></click>'
+  btn-19:
+    slot: 19
+    item:
+      material: COMPARATOR
+      model-id: 10005
+      name: '&d [5] 伺服器分流'
+      lore:
+        - '&8指令: &f/server waiting'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'connect'
+        server: 'waiting'
+
+  btn-21:
+    slot: 21
+    item:
+      material: EXPERIENCE_BOTTLE
+      model-id: 10006
+      name: '&3 [6] 任務系統'
+      lore:
+        - '&8指令: &f/task gui'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - 'task gui'
+        command-in-chat: false
+  btn-23:
+    slot: 23
+    item:
+      material: GOLDEN_PICKAXE
+      model-id: 10007
+      name: '&7 [7] 連鎖採掘'
+      lore:
+        - '&8連鎖採掘開關'
+        - ''
+        - '&a▸ 點擊開啟'
+    actions:
+      - type: inventory
+        inventory: chain
+  btn-25:
+    slot: 25
+    item:
+      material: COMMAND_BLOCK
+      model-id: 10008
+      name: '&9 [8] 基礎功能'
+      lore:
+        - '&8常用指令'
+        - ''
+        - '&a▸ 點擊開啟'
+    actions:
+      - type: inventory
+        inventory: general
+

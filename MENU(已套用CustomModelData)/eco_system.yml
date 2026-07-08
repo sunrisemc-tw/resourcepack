@@ -1,0 +1,65 @@
+name: '&e 經濟金融'
+size: 45
+update-interval: 20
+items:
+  btn-0:
+    page: 1
+    slot: 0
+    item:
+      material: OAK_DOOR
+      model-id: 10015
+      name: '&c← 返回主選單'
+      lore:
+        - '&7返回日出伺服器主選單'
+    actions:
+      - type: inventory
+        inventory: main
+  btn-20:
+    page: 1
+    slot: 20
+    item:
+      material: GOLD_INGOT
+      model-id: 10016
+      name: '&e 轉帳支付'
+      lore:
+        - '&8指令: &f/pay'
+        - '&7點按鈕後點聊天綠字'
+        - '&a▸ 點擊使用'
+    actions:
+      - type: close
+      - type: message
+        messages:
+          - '<click:suggest_command:"/pay "><hover:show_text:"&7填入 /pay，Tab 選玩家後輸入金額">&a▸ 點此填入 &f/pay</hover></click>'
+        mini-message: true
+  btn-22:
+    page: 1
+    slot: 22
+    item:
+      material: ORANGE_BUNDLE
+      model-id: 10017
+      name: '&e 我的錢包'
+      lore:
+        - '&8指令: &f/bal'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - bal
+        command-in-chat: false
+  btn-24:
+    page: 1
+    slot: 24
+    item:
+      material: MOB_WANDERING_TRADER_FACE
+      model-id: 10018
+      name: '&e 伺服器商店'
+      lore:
+        - '&8指令: &f/store'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - store
+        command-in-chat: false

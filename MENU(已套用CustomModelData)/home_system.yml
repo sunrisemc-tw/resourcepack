@@ -1,0 +1,88 @@
+name: '&6 住宅系統'
+size: 45
+items:
+  btn-0:
+    slot: 0
+    item:
+      material: OAK_DOOR
+      model-id: 10019
+      name: '&c← 返回主選單'
+      lore:
+        - '&7返回日出伺服器主選單'
+    actions:
+      - type: inventory
+        inventory: main
+  btn-19:
+    slot: 19
+    item:
+      material: WHITE_BANNER
+      model-id: 10020
+      name: '&6 查看房屋點'
+      lore:
+        - '&8指令: &f/homelist'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - homelist
+        command-in-chat: false
+  btn-21:
+    slot: 21
+    item:
+      material: LODESTONE_COMPASS
+      model-id: 10021
+      name: '&6 新增房屋點'
+      lore:
+        - '&8指令: &f/sethome'
+        - '&7點按鈕後點聊天綠字'
+        - '&a▸ 點擊使用'
+    actions:
+      - type: close
+      - type: message
+        messages:
+          - '<click:suggest_command:"/sethome "><hover:show_text:"&7填入 /sethome 後輸入家點名稱">&a▸ 點此填入 &f/sethome</hover></click>'
+        mini-message: true
+  btn-23:
+    slot: 23
+    item:
+      material: ENDER_PEARL
+      model-id: 10022
+      name: '&6 傳送至房屋點'
+      lore:
+        - '&8指令: &f/home'
+        - '&7點按鈕後點聊天綠字'
+        - '&a▸ 點擊使用'
+    actions:
+      - type: close
+      - type: message
+        messages:
+          - '<click:suggest_command:"/home "><hover:show_text:"&7填入 /home 後輸入家點名稱">&a▸ 點此填入 &f/home</hover></click>'
+        mini-message: true
+  btn-25:
+    slot: 25
+    item:
+      material: BARRIER
+      model-id: 10023
+      name: '&6 刪除房屋點'
+      lore:
+        - '&8指令: &f/delhome'
+        - '&7點按鈕後點聊天綠字'
+        - '&a▸ 點擊使用'
+    actions:
+      - type: close
+      - type: message
+        messages:
+          - '<click:suggest_command:"/delhome "><hover:show_text:"&7填入 /delhome 後輸入家點名稱">&a▸ 點此填入 &f/delhome</hover></click>'
+        mini-message: true
+  btn-36:
+    slot: 36
+    item:
+      material: OAK_TRAPDOOR
+      model-id: 10024
+      name: '&c← 返回上一頁'
+      lore:
+        - '&7返回傳送系統'
+    actions:
+      - type: inventory
+        inventory: tp_system

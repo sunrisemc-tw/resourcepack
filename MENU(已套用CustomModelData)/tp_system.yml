@@ -1,0 +1,176 @@
+name: '&6 傳送系統'
+size: 45
+update-interval: 20
+items:
+  btn-0:
+    page: 1
+    slot: 0
+    item:
+      material: OAK_DOOR
+      model-id: 10025
+      name: '&c← 返回主選單'
+      lore:
+        - '&7返回日出伺服器主選單'
+    actions:
+      - type: inventory
+        inventory: main
+  btn-19:
+    page: 1
+    slot: 19
+    item:
+      material: LODESTONE_COMPASS
+      model-id: 10026
+      name: '&6 返回出生點'
+      lore:
+        - '&8指令: &f/spawn'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - spawn
+        command-in-chat: false
+  btn-20:
+    page: 1
+    slot: 20
+    item:
+      material: PLAYER_HEAD
+      model-id: 10027
+      name: '&6 傳送請求(過去)'
+      lore:
+        - '&8指令: &f/tpa'
+        - '&7點按鈕後點聊天綠字'
+        - '&a▸ 點擊使用'
+    actions:
+      - type: close
+      - type: message
+        messages:
+          - '<click:suggest_command:"/tpa "><hover:show_text:"&7填入 /tpa，Tab 選玩家">&a▸ 點此填入 &f/tpa</hover></click>'
+        mini-message: true
+  btn-21:
+    page: 1
+    slot: 21
+    item:
+      material: PLAYER_HEAD
+      model-id: 10028
+      name: '&6 傳送請求(回來)'
+      lore:
+        - '&8指令: &f/tpahere'
+        - '&7點按鈕後點聊天綠字'
+        - '&a▸ 點擊使用'
+    actions:
+      - type: close
+      - type: message
+        messages:
+          - '<click:suggest_command:"/tpahere "><hover:show_text:"&7填入 /tpahere，Tab 選玩家">&a▸ 點此填入 &f/tpahere</hover></click>'
+        mini-message: true
+  btn-22:
+    page: 1
+    slot: 22
+    item:
+      material: ORANGE_BED
+      model-id: 10029
+      name: '&6 住宅系統'
+      lore:
+        - '&8住宅與家點管理'
+        - ''
+        - '&a▸ 點擊開啟'
+    actions:
+      - type: inventory
+        inventory: home_system
+  btn-23:
+    page: 1
+    slot: 23
+    item:
+      material: LODESTONE
+      model-id: 10030
+      name: '&6 玩家地標'
+      lore:
+        - '&8指令: &f/pw'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - pw
+        command-in-chat: false
+  btn-24:
+    page: 1
+    slot: 24
+    item:
+      material: CLOCK
+      model-id: 10031
+      name: '&6 傳送紀錄'
+      lore:
+        - '&8指令: &f/tpb'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - tpb
+        command-in-chat: false
+  btn-25:
+    page: 1
+    slot: 25
+    item:
+      material: ENDER_PEARL
+      model-id: 10032
+      name: '&6 返回上一個地點'
+      lore:
+        - '&8指令: &f/back'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - back
+        command-in-chat: false
+  btn-29:
+    page: 1
+    slot: 29
+    item:
+      material: LIME_CONCRETE
+      model-id: 10033
+      name: '&a 同意傳送'
+      lore:
+        - '&8指令: &f/tpaccept'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - tpaccept
+        command-in-chat: false
+  btn-33:
+    page: 1
+    slot: 33
+    item:
+      material: RED_CONCRETE
+      model-id: 10034
+      name: '&c 拒絕傳送'
+      lore:
+        - '&8指令: &f/tpdeny'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - tpdeny
+        command-in-chat: false
+  btn-13:
+    page: 1
+    slot: 13
+    item:
+      material: ELYTRA
+      model-id: 10035
+      name: '&6 隨機傳送'
+      lore:
+        - '&8指令: &f/rtp'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - rtp
+        command-in-chat: false

@@ -1,0 +1,59 @@
+name: '&7 連鎖採集'
+size: 9
+items:
+  btn-0:
+    slot: 0
+    item:
+      material: OAK_DOOR
+      model-id: 10040
+      name: '&c← 返回主選單'
+      lore:
+        - '&7返回日出伺服器主選單'
+    actions:
+      - type: inventory
+        inventory: main
+  btn-2:
+    slot: 2
+    item:
+      material: DIAMOND_PICKAXE
+      model-id: 10041
+      name: '&7 礦物開關'
+      lore:
+        - '&8指令: &f/sh mining'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - 'sh mining'
+        command-in-chat: false
+  btn-4:
+    slot: 4
+    item:
+      material: DIAMOND_AXE
+      model-id: 10042
+      name: '&7 樹木開關'
+      lore:
+        - '&8指令: &f/sh logging'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - 'sh logging'
+        command-in-chat: false
+  btn-6:
+    slot: 6
+    item:
+      material: DIAMOND_HOE
+      model-id: 10043
+      name: '&7 農作物開關'
+      lore:
+        - '&8指令: &f/sh farming'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - 'sh farming'
+        command-in-chat: false

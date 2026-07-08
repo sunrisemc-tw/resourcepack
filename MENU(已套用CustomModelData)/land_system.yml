@@ -1,0 +1,59 @@
+name: '&a 領地系統'
+size: 45
+items:
+  btn-0:
+    slot: 0
+    item:
+      material: OAK_DOOR
+      model-id: 10036
+      name: '&c← 返回主選單'
+      lore:
+        - '&7返回日出伺服器主選單'
+    actions:
+      - type: inventory
+        inventory: main
+  btn-20:
+    slot: 20
+    item:
+      material: COMMAND_BLOCK
+      model-id: 10037
+      name: '&a 權限設置'
+      lore:
+        - '&8指令: &f/res set'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - 'res set'
+        command-in-chat: false
+  btn-22:
+    slot: 22
+    item:
+      material: COMPASS
+      model-id: 10038
+      name: '&a 創建領地'
+      lore:
+        - '&8指令: &f/res create'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - 'res create'
+        command-in-chat: false
+  btn-24:
+    slot: 24
+    item:
+      material: BARRIER
+      model-id: 10039
+      name: '&a 刪除領地'
+      lore:
+        - '&8指令: &f/res remove'
+        - ''
+        - '&a▸ 點擊使用'
+    actions:
+      - type: 'player command'
+        commands:
+          - 'res remove'
+        command-in-chat: false
