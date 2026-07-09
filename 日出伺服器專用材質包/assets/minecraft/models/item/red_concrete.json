@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:block/red_concrete"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 10034
+      },
+      "model": "minecraft:item/menu/tpdeny"
+    }
+  ]
+}

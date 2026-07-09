@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10021,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/sethome"
+        }
+      },
+      {
+        "threshold": 10026,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/spawn"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/lodestone_compass"
+    }
+  }
+}

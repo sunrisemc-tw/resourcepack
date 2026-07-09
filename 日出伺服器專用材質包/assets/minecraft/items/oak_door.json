@@ -1,0 +1,54 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10009,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/back_main"
+        }
+      },
+      {
+        "threshold": 10015,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/back_main"
+        }
+      },
+      {
+        "threshold": 10019,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/back_main"
+        }
+      },
+      {
+        "threshold": 10025,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/back_main"
+        }
+      },
+      {
+        "threshold": 10036,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/back_main"
+        }
+      },
+      {
+        "threshold": 10040,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/back_main"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/oak_door"
+    }
+  }
+}

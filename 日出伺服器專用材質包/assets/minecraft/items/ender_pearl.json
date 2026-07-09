@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10022,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/home_tp"
+        }
+      },
+      {
+        "threshold": 10032,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/back"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/ender_pearl"
+    }
+  }
+}

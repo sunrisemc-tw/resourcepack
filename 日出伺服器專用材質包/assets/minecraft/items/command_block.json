@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10008,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/general"
+        }
+      },
+      {
+        "threshold": 10037,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/res_set"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/command_block"
+    }
+  }
+}

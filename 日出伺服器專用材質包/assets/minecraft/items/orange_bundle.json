@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10017,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/wallet"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/orange_bundle"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10014,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/msg"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/oak_sign"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/oak_door"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 10009
+      },
+      "model": "minecraft:item/menu/back_main"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10015
+      },
+      "model": "minecraft:item/menu/back_main"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10019
+      },
+      "model": "minecraft:item/menu/back_main"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10025
+      },
+      "model": "minecraft:item/menu/back_main"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10036
+      },
+      "model": "minecraft:item/menu/back_main"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10040
+      },
+      "model": "minecraft:item/menu/back_main"
+    }
+  ]
+}

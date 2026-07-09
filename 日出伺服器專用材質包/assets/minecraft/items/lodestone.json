@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10030,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/pw"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/lodestone"
+    }
+  }
+}

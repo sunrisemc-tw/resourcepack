@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:item/template_skull",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 10018
+      },
+      "model": "minecraft:item/menu/store"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10027
+      },
+      "model": "minecraft:item/menu/tpa"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10028
+      },
+      "model": "minecraft:item/menu/tpahere"
+    }
+  ]
+}

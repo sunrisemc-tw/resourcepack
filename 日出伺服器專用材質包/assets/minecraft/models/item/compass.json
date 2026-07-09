@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/compass_16"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 10001
+      },
+      "model": "minecraft:item/menu/tp_system"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10004
+      },
+      "model": "minecraft:item/menu/external_links"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10038
+      },
+      "model": "minecraft:item/menu/res_create"
+    }
+  ]
+}

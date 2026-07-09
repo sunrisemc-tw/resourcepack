@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10033,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/tpaccept"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:block/lime_concrete"
+    }
+  }
+}

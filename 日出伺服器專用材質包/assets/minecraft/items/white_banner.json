@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10020,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/homelist"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/white_banner"
+    }
+  }
+}

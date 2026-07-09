@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10005,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/server_hub"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/comparator"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10007,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/chain_mining"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/golden_pickaxe"
+    }
+  }
+}

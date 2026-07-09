@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/lodestone_compass"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 10021
+      },
+      "model": "minecraft:item/menu/sethome"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10026
+      },
+      "model": "minecraft:item/menu/spawn"
+    }
+  ]
+}

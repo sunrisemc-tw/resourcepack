@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10023,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/delhome"
+        }
+      },
+      {
+        "threshold": 10039,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/res_remove"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/barrier"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10010,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/fly"
+        }
+      },
+      {
+        "threshold": 10035,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/rtp"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/elytra"
+    }
+  }
+}

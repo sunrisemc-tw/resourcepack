@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/command_block"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 10008
+      },
+      "model": "minecraft:item/menu/general"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10037
+      },
+      "model": "minecraft:item/menu/res_set"
+    }
+  ]
+}

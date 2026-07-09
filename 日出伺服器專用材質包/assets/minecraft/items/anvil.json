@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 10013,
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/menu/anvil"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "minecraft:item/anvil"
+    }
+  }
+}
