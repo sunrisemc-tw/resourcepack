@@ -1,0 +1,67 @@
+# 打包時排除的檔案（路徑相對於「日出伺服器專用材質包/」，支援 * 萬用字元）
+# 以 # 開頭的行與空行會被忽略
+# 選單材質完成後，刪除下方 menu 區塊即可讓選單材質正式進入遊戲
+
+# ===== menu（zMenu 選單）材質尚未完成，暫不打包 =====
+assets/minecraft/textures/item/menu/*
+assets/minecraft/models/item/menu/*
+
+# 1.21.4+ 物品定義（僅含 menu 用途）
+assets/minecraft/items/anvil.json
+assets/minecraft/items/barrier.json
+assets/minecraft/items/clock.json
+assets/minecraft/items/command_block.json
+assets/minecraft/items/comparator.json
+assets/minecraft/items/compass.json
+assets/minecraft/items/crafting_table.json
+assets/minecraft/items/diamond_axe.json
+assets/minecraft/items/diamond_hoe.json
+assets/minecraft/items/diamond_pickaxe.json
+assets/minecraft/items/elytra.json
+assets/minecraft/items/ender_chest.json
+assets/minecraft/items/ender_pearl.json
+assets/minecraft/items/experience_bottle.json
+assets/minecraft/items/golden_pickaxe.json
+assets/minecraft/items/gold_ingot.json
+assets/minecraft/items/grass_block.json
+assets/minecraft/items/lime_concrete.json
+assets/minecraft/items/lodestone_compass.json
+assets/minecraft/items/lodestone.json
+assets/minecraft/items/oak_door.json
+assets/minecraft/items/oak_sign.json
+assets/minecraft/items/oak_trapdoor.json
+assets/minecraft/items/orange_bed.json
+assets/minecraft/items/orange_bundle.json
+assets/minecraft/items/player_head.json
+assets/minecraft/items/red_concrete.json
+assets/minecraft/items/white_banner.json
+
+# 1.21.3 以下 overrides（僅含 menu 用途）
+assets/minecraft/models/item/anvil.json
+assets/minecraft/models/item/barrier.json
+assets/minecraft/models/item/clock.json
+assets/minecraft/models/item/command_block.json
+assets/minecraft/models/item/comparator.json
+assets/minecraft/models/item/compass.json
+assets/minecraft/models/item/crafting_table.json
+assets/minecraft/models/item/diamond_axe.json
+assets/minecraft/models/item/diamond_hoe.json
+assets/minecraft/models/item/diamond_pickaxe.json
+assets/minecraft/models/item/elytra.json
+assets/minecraft/models/item/ender_chest.json
+assets/minecraft/models/item/ender_pearl.json
+assets/minecraft/models/item/experience_bottle.json
+assets/minecraft/models/item/golden_pickaxe.json
+assets/minecraft/models/item/gold_ingot.json
+assets/minecraft/models/item/grass_block.json
+assets/minecraft/models/item/lime_concrete.json
+assets/minecraft/models/item/lodestone_compass.json
+assets/minecraft/models/item/lodestone.json
+assets/minecraft/models/item/oak_door.json
+assets/minecraft/models/item/oak_sign.json
+assets/minecraft/models/item/oak_trapdoor.json
+assets/minecraft/models/item/orange_bed.json
+assets/minecraft/models/item/orange_bundle.json
+assets/minecraft/models/item/player_head.json
+assets/minecraft/models/item/red_concrete.json
+assets/minecraft/models/item/white_banner.json

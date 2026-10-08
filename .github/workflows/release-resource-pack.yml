@@ -17,8 +17,10 @@ jobs:
 
       - name: Create resource pack zip
         run: |
+          touch .packignore
+          grep -vE '^[[:space:]]*(#|$)' .packignore > "$RUNNER_TEMP/exclude.lst" || true
           cd "日出伺服器專用材質包"
-          zip -r ../sunrisemc.s.resource.pack.zip .
+          zip -r ../sunrisemc.s.resource.pack.zip . -x@"$RUNNER_TEMP/exclude.lst"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
