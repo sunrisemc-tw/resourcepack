@@ -1,14 +1,11 @@
 name: Release Resource Pack
-
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -16,17 +13,63 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create resource pack zip
+      # ---------- Java pack（原有流程）----------
+      - name: Create Java resource pack zip
         run: |
           touch .packignore
           grep -vE '^[[:space:]]*(#|$)' .packignore > "$RUNNER_TEMP/exclude.lst" || true
           cd "日出伺服器專用材質包"
           zip -r ../sunrisemc.s.resource.pack.zip . -x@"$RUNNER_TEMP/exclude.lst"
 
+      # ---------- Bedrock pack（j2b 轉換）----------
+      - name: Checkout j2b converter
+        uses: actions/checkout@v4
+        with:
+          repository: sunrisemc-tw/j2b-pack-converter
+          path: .j2b
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install j2b deps + Mesa (headless GL for icons)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libgl1-mesa-dri libegl1 libgles2 libglvnd0 libosmesa6
+          python -m pip install --upgrade pip
+          pip install moderngl pillow numpy
+
+      - name: Convert Java pack -> Bedrock + Geyser mappings
+        env:
+          LIBGL_ALWAYS_SOFTWARE: "1"
+          MESA_GL_VERSION_OVERRIDE: "4.5"
+          PYTHONPATH: ${{ github.workspace }}/.j2b
+        run: |
+          # 若 CI 的 EGL 軟體渲染不可用，convert.py 會自動略過 icon（try/except）並續跑。
+          python -m j2b convert "日出伺服器專用材質包" -o "$RUNNER_TEMP/bedrock_out" --pack-name sunrisepack
+          echo "---- 轉換報告 ----"
+          sed -n '1,40p' "$RUNNER_TEMP/bedrock_out/report.txt" || true
+
+      - name: Package Bedrock .mcpack (as .zip for Geyser URL)
+        run: |
+          cd "$RUNNER_TEMP/bedrock_out/pack"
+          # manifest 在 zip 根；可重現打包
+          find . -type f | LC_ALL=C sort | zip -q -X "$GITHUB_WORKSPACE/sunrise-bedrock.models.zip" -@
+          # mappings 檔也當 release 資產（部署端取用）
+          cp "$RUNNER_TEMP/bedrock_out/custom_mappings/geyser_item_mappings.json" \
+             "$GITHUB_WORKSPACE/geyser_item_mappings.json"
+          ls -la "$GITHUB_WORKSPACE"/sunrise-bedrock.models.zip "$GITHUB_WORKSPACE"/geyser_item_mappings.json
+
+      # ---------- 發 release（Java + Bedrock 一起）----------
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: release-${{ github.run_number }}
           name: Release ${{ github.run_number }}
-          files: sunrisemc.s.resource.pack.zip
+          files: |
+            sunrisemc.s.resource.pack.zip
+            sunrise-bedrock.models.zip
+            geyser_item_mappings.json
           generate_release_notes: true
