@@ -274,5 +274,11 @@
         "sounds": [
             "reloadshell"
         ]
+    },
+    "setver1": {
+        "replace": false,
+        "sounds": [
+            "setver1"
+        ]
     }
 }
