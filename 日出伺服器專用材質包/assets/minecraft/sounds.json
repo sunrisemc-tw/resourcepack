@@ -275,10 +275,10 @@
             "reloadshell"
         ]
     },
-    "friendsWine": {
+    "friends_wine": {
         "replace": false,
         "sounds": [
-            "friendsWine"
+            "friends_wine"
         ]
     }
 }
