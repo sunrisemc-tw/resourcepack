@@ -275,10 +275,10 @@
             "reloadshell"
         ]
     },
-    "setver1": {
+    "friendsWine": {
         "replace": false,
         "sounds": [
-            "setver1"
+            "friendsWine"
         ]
     }
 }
